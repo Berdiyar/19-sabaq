@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="280dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="bottom"
+        android:layout_margin="24dp"
+        android:textSize="20sp"
+        style="bold"
+        android:text="Userge qosiw!"
+        android:textColor="@color/black"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="5"
+        android:id="@+id/recyclerdialog"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/btnOk"
+        android:layout_height="52dp"
+        android:minWidth="64dp"
+        android:textSize="15sp"
+        android:text="Ok"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerdialog"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerdialog"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_height="52dp"
+        android:minWidth="64dp"
+        android:textSize="15sp"
+        android:text="Cancel"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnOk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerdialog"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
